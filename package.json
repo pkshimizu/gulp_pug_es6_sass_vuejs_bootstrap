@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/pkshimizu/gulp_pug_es6_sass_vuejs_bootstrap#readme",
   "devDependencies": {
+    "browser-sync": "^2.18.12",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-notify": "^3.0.0",
