@@ -10,6 +10,8 @@ var buffer = require("vinyl-buffer")
 var source = require("vinyl-source-stream")
 var sourcemaps = require("gulp-sourcemaps")
 var uglify = require("gulp-uglify")
+var postcss = require("gulp-postcss")
+var postcssImport = require("postcss-import")
 
 gulp.task('default', ['es6', 'sass', 'browser-sync', 'pug', 'watch']);
 
@@ -43,6 +45,7 @@ gulp.task("sass", () => {
     errorHandler: notify.onError("Error: <%= error.message %>")
   }))
   .pipe(sass())
+  .pipe(postcss([postcssImport]))
   .pipe(gulp.dest("./dist/css/"))
   .pipe(browserSync.stream())
 });

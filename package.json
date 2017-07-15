@@ -26,11 +26,16 @@
     "gulp-babel": "^6.1.2",
     "gulp-notify": "^3.0.0",
     "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^7.0.0",
     "gulp-pug": "^3.3.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^3.0.0",
+    "postcss-import": "^10.0.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7"
   }
 }
