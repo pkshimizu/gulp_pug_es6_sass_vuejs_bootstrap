@@ -12,6 +12,7 @@ var sourcemaps = require("gulp-sourcemaps")
 var uglify = require("gulp-uglify")
 var postcss = require("gulp-postcss")
 var postcssImport = require("postcss-import")
+var vueify = require('vueify')
 
 gulp.task('default', ['es6', 'sass', 'browser-sync', 'pug', 'watch']);
 
@@ -65,9 +66,13 @@ gulp.task("pug", () => {
 gulp.task("es6", () => {
   browserify({
     entries: "./src/main/js/app.js",
-    debug: true
+    debug: true,
+    extensions: ['.js', '.vue'],
+    transform: [
+      vueify,
+      babelify.configure({ 'presets' : ['es2015'] })
+    ]
   })
-  .transform(babelify)
   .bundle()
   .on("error", err => console.log("Error: " + err.message))
   .pipe(source("app.js"))

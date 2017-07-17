@@ -1,9 +1,13 @@
 doctype html
 html
-  title gulp + pug + ES6 + Sass + Vue.js + Bootstrap.js
-  link(rel="stylesheet", type="text/css" href="css/app.css")
+  head
+    title gulp + pug + ES6 + Sass + Vue.js + Bootstrap.js
+    link(rel="stylesheet", type="text/css" href="css/app.css")
 
-body
-  h1 フロント開発環境サンプル
-  a.btn.btn-primary Button
-  button.btn Button
+  body
+    h1 フロント開発環境サンプル
+    a.btn.btn-primary Button
+    button.btn Button
+    #app
+      message
+    script(type="text/javascript", src="js/app.js")

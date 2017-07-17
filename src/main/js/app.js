@@ -1,5 +1,7 @@
-import Log from "./log"
+import Vue from "vue"
+import message from "./hello.vue"
 
-var hallo = (name) => {
-  Log.info("Hello " + name)
-}
+module.exports = new Vue({
+  el: '#app',
+  render: h => h(message)
+});
